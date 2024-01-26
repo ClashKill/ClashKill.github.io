@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Inscripción al Torneo de Tenis de Mesa</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            height: 100vh;
+        }
+
+        form {
+            width: 400px;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+            margin-top: 25rem;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            color: #333;
+        }
+
+        input,
+        select,
+        button {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 16px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+
+        .checkbox-group {
+            margin-bottom: 16px;
+        }
+
+        .checkbox-group div {
+            margin-bottom: 8px;
+        }
+
+        button {
+            background-color: #3498db;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #2980b9;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            text-align: center;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        #categoriasSeleccionadas {
+            margin-bottom: 16px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <form action="#" method="post">
+        <h1>Inscripción al Torneo de Tenis de Mesa</h1>
+
+        <!-- Nombre -->
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" required>
+
+        <!-- Edad -->
+        <label for="edad">Edad:</label>
+        <input type="number" id="edad" name="edad" required>
+
+        <!-- Género -->
+        <label for="genero">Género:</label>
+        <select id="genero" name="genero" required>
+            <option value="masculino">Masculino</option>
+            <option value="femenino">Femenino</option>
+            <option value="otro">Otro</option>
+        </select>
+
+        <!-- Categorías -->
+        <div class="checkbox-group">
+            <label>Categorías:</label>
+            <div>
+                <input type="checkbox" id="divisionDeHonor" name="categorias[]" value="DivisionDeHonor" onchange="actualizarCategorias()">
+                <label for="divisionDeHonor">División de Honor</label>
+            </div>
+            <div>
+                <input type="checkbox" id="primera" name="categorias[]" value="Primera" onchange="actualizarCategorias()">
+                <label for="primera">Primera</label>
+            </div>
+            <div>
+                <input type="checkbox" id="segunda" name="categorias[]" value="Segunda" onchange="actualizarCategorias()">
+                <label for="segunda">Segunda</label>
+            </div>
+            <div>
+                <input type="checkbox" id="tercera" name="categorias[]" value="Tercera" onchange="actualizarCategorias()">
+                <label for="tercera">Tercera</label>
+            </div>
+            <div>
+                <input type="checkbox" id="cuarta" name="categorias[]" value="Cuarta" onchange="actualizarCategorias()">
+                <label for="cuarta">Cuarta</label>
+            </div>
+            <div>
+                <input type="checkbox" id="quinta" name="categorias[]" value="Quinta" onchange="actualizarCategorias()">
+                <label for="quinta">Quinta</label>
+            </div>
+        </div>
+
+        <!-- Nivel de juego -->
+        <label for="nivel">Nivel de Juego:</label>
+        <select id="nivel" name="nivel" required>
+            <option value="principiante">Principiante</option>
+            <option value="intermedio">Intermedio</option>
+            <option value="avanzado">Avanzado</option>
+        </select>
+
+        <!-- Mensaje de categorías seleccionadas -->
+        <p id="categoriasSeleccionadas">Categorías seleccionadas: <span id="categoriasSeleccionadasTexto"></span></p>
+        <button type="submit">Incribirme</button>
+    </form>
+
+    <ul id="listaCategorias"></ul>
+
+    <script>
+        function actualizarCategorias() {
+            var categoriasSeleccionadas = obtenerCategoriasSeleccionadas();
+            var categoriasSeleccionadasTexto = categoriasSeleccionadas.join(', ');
+
+            if (categoriasSeleccionadas.length > 0) {
+                document.getElementById('categoriasSeleccionadasTexto').textContent = categoriasSeleccionadasTexto;
+                document.getElementById('categoriasSeleccionadas').style.display = 'block';
+
+                // Actualizar la lista de categorías debajo del formulario
+                var listaCategorias = document.getElementById('listaCategorias');
+                listaCategorias.innerHTML = '';
+                categoriasSeleccionadas.forEach(function (categoria) {
+                    var listItem = document.createElement('li');
+                    listItem.textContent = categoria;
+                    listaCategorias.appendChild(listItem);
+                });
+            } else {
+                document.getElementById('categoriasSeleccionadas').style.display = 'none';
+            }
+        }
+
+        function obtenerCategoriasSeleccionadas() {
+            var checkboxes = document.querySelectorAll('input[name="categorias[]"]:checked');
+            var categoriasSeleccionadas = Array.from(checkboxes).map(function (checkbox) {
+                return checkbox.value;
+            });
+
+            return categoriasSeleccionadas;
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Subida de Ranking</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        form {
+            width: 400px;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            color: #333;
+        }
+
+        input,
+        select,
+        button {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 16px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+
+        input[type="file"] {
+            padding: 8px;
+        }
+
+        button {
+            background-color: #3498db;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #2980b9;
+        }
+    </style>
+</head>
+<body>
+
+    <form action="#" method="post" enctype="multipart/form-data">
+        <h1>Subir Ranking</h1>
+
+        <!-- Nombre del ranking -->
+        <label for="nombreRanking">Nombre del Ranking:</label>
+        <input type="text" id="nombreRanking" name="nombreRanking" required>
+
+        <!-- Categorías del ranking -->
+        <label for="categoriasRanking">Categorías del Ranking:</label>
+        <select id="categoriasRanking" name="categoriasRanking[]" multiple required>
+            <option value="Primera">Primera</option>
+            <option value="Segunda">Segunda</option>
+            <option value="Tercera">Tercera</option>
+            <option value="Cuarta">Cuarta</option>
+            <option value="Quinta">Quinta</option>
+        </select>
+
+        <!-- Subir archivo del ranking -->
+        <label for="archivoRanking">Subir Archivo del Ranking:</label>
+        <input type="file" id="archivoRanking" name="archivoRanking" accept=".csv, application/vnd.ms-excel, application/vnd.openxmlformats-officedocument.spreadsheetml.sheet" required>
+
+        <!-- Botón de enviar -->
+        <button type="submit">Subir Ranking</button>
+    </form>
+
+</body>
+</html>

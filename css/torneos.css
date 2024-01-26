@@ -1,0 +1,173 @@
+body {
+    margin: 0;
+}
+div {
+    padding: 0;
+}
+
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: inherit;
+}
+
+h2,
+h1 {
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+}
+.nav-item {
+    color: white;
+    font-size: 1.5rem;
+    font-family: 'Courier New', Courier, monospace;
+    margin-right: 1rem;
+    font-weight: bold;
+    transition: 1s;
+}
+.nav-item:visited {
+    color: white;
+}
+.nav-item:hover {
+    color: red;
+    text-decoration: wavy underline white;
+    font-size: 1.5rem;
+    font-family: 'Courier New', Courier, monospace;
+    margin-right: 1rem;
+    font-weight: bold;
+    transition: 1s;
+}
+.nav-bar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 3rem;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+}
+.nav-item-img {
+    width: 80px;
+    height: auto;
+    object-fit: cover;
+    margin-right: 2rem;
+}
+
+.nav-account-managment {
+    width: 30px;
+    height: auto;
+    clip-path: circle();
+    position: absolute;
+    top: .5rem;
+    right: 1rem;
+    background: linear-gradient(90deg, rgba(0,236,255,1) 0%, rgba(0,156,143,1) 50%, rgba(0,212,255,1) 100%);
+}
+
+.nav-item:nth-child(4) {
+    text-decoration: wavy underline white;
+    color: red;
+}
+
+.events-container {
+    width: 100%;
+    height: 38rem;
+    background-color: black;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 3rem;
+    padding: 4rem;
+}
+.events-container-2 {
+    position: relative;
+    width: 100%;
+    height: 32rem;
+    border: medium solid #007163;
+}
+.events-image-logo-fmtm {
+    width: 10rem;
+    height: auto;
+}
+.events-comence-in {
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+    color: white;
+    font-size: 2.5rem;
+}
+.cuenta-regresiva {
+    position: absolute;
+    right: 1rem;
+    top: 3rem;
+    color: white;
+    font-size: 5rem;
+}
+.cuenta-regresiva-2 {
+    position: absolute;
+    top: 7rem;
+    right: 1rem;
+    color: white;
+    white-space: pre;
+}
+.extra-bold {
+    position: absolute;
+    top: 8rem;
+    font-weight:900;
+    color: white;
+    font-size: 3.5rem;
+    font-family: sans-serif;
+}
+.event-date {
+    position: absolute;
+    top: 12.5rem;
+    left: 0.8rem;
+    color: white;
+    font-weight:100;
+    font-family: serif;
+    font-size: 2rem;
+}
+.cmr-logo {
+    position: absolute;
+    bottom: 1rem;
+    left: 1rem;
+}
+.event-boton-inscribirse {
+    position: absolute;
+    right: 2rem;
+    bottom: 2rem;
+    border: medium solid #00FFD1;
+    color: white;
+    padding: .5rem;
+    width: fit-content;
+    height: fit-content;
+    font-size: 1.6rem;
+    border-radius: 30px;
+    text-align: center;
+    transition: 2s;
+}
+.event-boton-inscribirse:hover {
+    background-color: #00FFD1;
+    color: black;
+    transition: 2s;
+}
+.event-categories {
+    position: absolute;
+    right: 3rem;
+    top: 10.8rem;
+    color: white;
+    font-size: 1.5rem;
+}
+.event-categories-list {
+    position: absolute;
+    top: 13rem;
+    right: 3.1rem;
+    color: white;
+}
+
+

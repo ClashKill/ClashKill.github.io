@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Torneo</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        form {
+            width: 300px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-top: 10rem;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        input,
+        select,
+        button {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 16px;
+            box-sizing: border-box;
+        }
+
+        .checkbox-group {
+            margin-bottom: 16px;
+        }
+
+        input[type="checkbox"] {
+            margin-right: 8px;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+    <form action="#" method="post">
+        <h1 style="text-align: center;">Formulario de Torneo</h1>
+
+        <!-- Nombre del torneo -->
+        <label for="nombreTorneo">Nombre del Torneo:</label>
+        <input type="text" id="nombreTorneo" name="nombreTorneo" required>
+
+        <!-- Fecha de inicio del torneo -->
+        <label for="fechaInicio">Fecha de Inicio del Torneo:</label>
+        <input type="date" id="fechaInicio" name="fechaInicio" required>
+
+        <label for="fechaFinal">Fecha Final del Torneo:</label>
+        <input type="date" id="fechaFinal" name="fechaFinal" required>
+
+        <!-- Categorías -->
+        <div class="checkbox-group">
+            <label>Categorías:</label>
+            <div>
+                <input type="checkbox" id="primera" name="categorias[]" value="Primera">
+                <label for="primera">Primera</label>
+            </div>
+            <div>
+                <input type="checkbox" id="segunda" name="categorias[]" value="Segunda">
+                <label for="segunda">Segunda</label>
+            </div>
+            <div>
+                <input type="checkbox" id="tercera" name="categorias[]" value="Tercera">
+                <label for="tercera">Tercera</label>
+            </div>
+            <div>
+                <input type="checkbox" id="cuarta" name="categorias[]" value="Cuarta">
+                <label for="cuarta">Cuarta</label>
+            </div>
+            <div>
+                <input type="checkbox" id="quinta" name="categorias[]" value="Quinta">
+                <label for="quinta">Quinta</label>
+            </div>
+        </div>
+
+        <!-- Botón de enviar -->
+        <button type="submit">SUBIR TORNEO</button>
+    </form>
+
+</body>
+</html>
