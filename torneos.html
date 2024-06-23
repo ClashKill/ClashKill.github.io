@@ -10,22 +10,27 @@
     <header>
         <div class="nav-bar">
             <a href="index.html"><img src="/img/logo-fmtm-main.jpg" alt="LogoFmtmt" class="nav-item-img"></a>
-            <a href="ranking.html" class="nav-item">RANKING</a>
-            <a href="calendario.html" class="nav-item">CALENDARIO</a>
-            <a href="torneos.html" class="nav-item">TORNEOS</a>
-            <a href="reglamento.html" class="nav-item">REGLAMENTO</a>
-            <a href="contacto.html" class="nav-item">CONTACTO</a>
-            <a href="panel-administradores.html" class="nav-item">PANEL</a>
+            <nav>
+                <a href="ranking.html" class="nav-item">RANKING</a>
+                <a href="calendario.html" class="nav-item">CALENDARIO</a>
+                <a href="torneos.html" class="nav-item">TORNEOS</a>
+                <a href="reglamento.html" class="nav-item">REGLAMENTO</a>
+                <a href="contacto.html" class="nav-item">CONTACTO</a>
+                <a href="panel-administradores.html" class="nav-item">PANEL</a>
+            </nav>
             <a href="account-managment.html"><img src="/img/account-managment.png" alt="account managment" class="nav-account-managment"></a>
+            <button class="nav-toggle" aria-label="Abrir menú">
+                <span class="hamburger"></span>
+            </button>
         </div>    
-        </header>
+    </header>
     <main>
         <div class="events-container">
             <div class="events-container-2">
                 <img src="img/logo-fmtm-2.jpg" alt="logo-fmtm" class="events-image-logo-fmtm">
                 <h1 class="events-comence-in">COMIENZA EN</h1>
                 <h1 class="cuenta-regresiva">40 10 40</h1>
-                <p class="cuenta-regresiva-2">DIAS           MINUTOS    SEGUNDOS</p>
+                <p class="cuenta-regresiva-2">DIAS MINUTOS SEGUNDOS</p>
                 <h1 class="extra-bold"><i>CAMPEONATO REGATAS N°1</i></h1>
                 <h2 class="event-date">8 OCT - 15 OCT</h2>
                 <h3 class="event-categories">CATEGORIAS</h3>
@@ -35,5 +40,10 @@
             </div>
         </div>
     </main>
+    <script>
+        document.querySelector('.nav-toggle').addEventListener('click', () => {
+            document.querySelector('.nav-bar nav').classList.toggle('nav-open');
+        });
+    </script>
 </body>
 </html>
