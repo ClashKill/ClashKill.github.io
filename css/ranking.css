@@ -1,6 +1,7 @@
 body {
     margin: 0;
 }
+
 div {
     padding: 0;
 }
@@ -23,6 +24,7 @@ h1 {
 a {
     text-decoration: none;
 }
+
 footer {
     display: flex;
     align-items: center;
@@ -31,9 +33,11 @@ footer {
     width: 100%;
     height: 3rem;
 }
+
 footer > h1 {
     color: white;
 }
+
 .nav-item {
     color: white;
     font-size: 1.5rem;
@@ -42,9 +46,11 @@ footer > h1 {
     font-weight: bold;
     transition: 1s;
 }
+
 .nav-item:visited {
     color: white;
 }
+
 .nav-item:hover {
     color: red;
     text-decoration: wavy underline white;
@@ -54,6 +60,7 @@ footer > h1 {
     font-weight: bold;
     transition: 1s;
 }
+
 .nav-bar {
     position: fixed;
     top: 0;
@@ -64,6 +71,7 @@ footer > h1 {
     align-items: center;
     padding: 1rem;
 }
+
 .nav-item-img {
     width: 80px;
     height: auto;
@@ -80,6 +88,7 @@ footer > h1 {
     right: 1rem;
     background: linear-gradient(90deg, rgba(0,236,255,1) 0%, rgba(0,156,143,1) 50%, rgba(0,212,255,1) 100%);
 }
+
 .nav-item:nth-child(2) {
     text-decoration: wavy underline white;
     color: red;
@@ -98,23 +107,25 @@ footer > h1 {
     align-items: center;
     width: 100%;
     border: thin solid lightseagreen;
-    height: 40rem;
+    height: auto;
+    padding: 2rem;
 }
 
 a {
     text-decoration: none;
 }
 
-.ranking > 
-h2, 
+.ranking > h2,
 div {
     color: white;
 }
+
 .ranking > h2 {
     text-align: center;
-    font-size: 10em;
+    font-size: 4em;
     font-family: serif;
 }
+
 .ranking > a {
     background-color: #8F0202;
     color: black;
@@ -126,6 +137,7 @@ div {
     border-radius: 1rem;
     transition: 1s;
 }
+
 .ranking > a:hover {
     background-color: #8F0202;
     transition: 1s;
@@ -137,22 +149,26 @@ div {
     border: thin solid black;
     border-radius: 1rem;
 }
+
 .ranking > div > span {
     border: thin solid white;
     margin: 1rem;
     padding: 1rem;
 }
+
 .ranking div {
     margin: 3rem;
 }
+
 .ranking-categorias {
     flex-wrap: wrap;
     text-align: center;
     border: thin solid lightseagreen;
     width: 20rem;
-    height: 13.5rem;
+    height: auto;
     padding: 1rem;
 }
+
 .ranking-categorias p {
     display: inline-flex;
     border: thin solid lightblue;
@@ -160,6 +176,91 @@ div {
     justify-content: space-between;
     margin: .5rem;
 }
+
 .ranking-categorias h1 {
     font-size: 1.5rem;
+}
+
+/* Media queries para pantallas más pequeñas */
+@media (max-width: 1200px) {
+    .nav-item {
+        font-size: 1.2rem;
+    }
+
+    .ranking > h2 {
+        font-size: 3em;
+    }
+
+    .ranking-categorias {
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .nav-bar {
+        flex-direction: column;
+        height: auto;
+        padding: 0.5rem;
+    }
+
+    .nav-item {
+        margin-right: 0;
+        margin-bottom: 0.5rem;
+        font-size: 1rem;
+    }
+
+    .nav-item-img {
+        width: 60px;
+        margin-right: 0;
+    }
+
+    .ranking-container {
+        padding: 1rem;
+    }
+
+    .ranking > h2 {
+        font-size: 2.5em;
+    }
+
+    .ranking-categorias {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .nav-item {
+        font-size: 0.8rem;
+    }
+
+    .nav-item-img {
+        width: 50px;
+    }
+
+    .nav-account-managment {
+        width: 25px;
+        top: 0.3rem;
+        right: 0.5rem;
+    }
+
+    .ranking > h2 {
+        font-size: 2em;
+    }
+
+    .ranking-categorias {
+        width: 100%;
+    }
+
+    .ranking > a {
+        font-size: 1rem;
+        padding: 0.5rem;
+    }
+
+    .ranking > div > span {
+        padding: 0.5rem;
+        margin: 0.5rem;
+    }
+
+    .ranking div {
+        margin: 1rem;
+    }
 }
