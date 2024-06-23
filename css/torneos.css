@@ -1,6 +1,8 @@
 body {
     margin: 0;
+    font-family: Arial, sans-serif;
 }
+
 div {
     padding: 0;
 }
@@ -15,14 +17,14 @@ html {
     box-sizing: inherit;
 }
 
-h2,
-h1 {
+h2, h1 {
     margin: 0;
 }
 
 a {
     text-decoration: none;
 }
+
 .nav-item {
     color: white;
     font-size: 1.5rem;
@@ -31,9 +33,11 @@ a {
     font-weight: bold;
     transition: 1s;
 }
+
 .nav-item:visited {
     color: white;
 }
+
 .nav-item:hover {
     color: red;
     text-decoration: wavy underline white;
@@ -43,6 +47,7 @@ a {
     font-weight: bold;
     transition: 1s;
 }
+
 .nav-bar {
     position: fixed;
     top: 0;
@@ -53,7 +58,9 @@ a {
     align-items: center;
     padding: 1rem;
     justify-content: space-between;
+    z-index: 1000;
 }
+
 .nav-item-img {
     width: 80px;
     height: auto;
@@ -78,6 +85,7 @@ a {
     align-items: center;
     justify-content: center;
 }
+
 .nav-bar nav.nav-open {
     display: block;
     position: absolute;
@@ -87,10 +95,12 @@ a {
     background-color: black;
     padding: 1rem 0;
 }
+
 .nav-bar nav a {
     display: block;
     padding: 0.5rem 0;
 }
+
 .nav-toggle {
     display: none;
     flex-direction: column;
@@ -103,6 +113,7 @@ a {
     padding: 0;
     z-index: 10;
 }
+
 .nav-toggle .hamburger {
     width: 2rem;
     height: 0.25rem;
@@ -111,6 +122,7 @@ a {
     position: relative;
     transform-origin: 1px;
 }
+
 .nav-toggle .hamburger::before,
 .nav-toggle .hamburger::after {
     content: '';
@@ -121,82 +133,91 @@ a {
     position: absolute;
     transform-origin: 1px;
 }
+
 .nav-toggle .hamburger::before {
     transform: translateY(-0.5rem);
 }
+
 .nav-toggle .hamburger::after {
     transform: translateY(0.5rem);
 }
 
 .events-container {
     width: 100%;
-    height: 38rem;
+    height: auto;
     background-color: black;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 3rem;
+    margin-top: 5rem;
     padding: 4rem;
 }
+
 .events-container-2 {
     position: relative;
     width: 100%;
-    height: 32rem;
+    height: auto;
     border: medium solid #007163;
+    padding: 2rem;
 }
+
 .events-image-logo-fmtm {
     width: 10rem;
     height: auto;
 }
+
 .events-comence-in {
-    position: absolute;
-    right: 1rem;
-    top: 1rem;
     color: white;
     font-size: 2.5rem;
-}
-#countdown {
-    position: absolute;
-    right: 1rem;
-    top: 3rem;
-    color: white;
     text-align: center;
 }
+
+#countdown {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 2rem;
+    color: white;
+}
+
 .cuenta-regresiva {
-    font-size: 5rem;
+    font-size: 3rem;
+    text-align: center;
 }
+
 .cuenta-regresiva-2 {
-    color: white;
-    white-space: pre;
+    font-size: 1.2rem;
+    text-align: center;
 }
+
 .extra-bold {
-    position: absolute;
-    top: 8rem;
-    font-weight:900;
+    font-weight: 900;
     color: white;
-    font-size: 3.5rem;
+    font-size: 2.5rem;
     font-family: sans-serif;
+    text-align: center;
+    margin-top: 1rem;
 }
+
 .event-date {
-    position: absolute;
-    top: 12.5rem;
-    left: 0.8rem;
     color: white;
-    font-weight:100;
+    font-weight: 100;
     font-family: serif;
-    font-size: 2rem;
+    font-size: 1.5rem;
+    text-align: center;
 }
+
 .cmr-logo {
-    position: absolute;
-    bottom: 1rem;
-    left: 1rem;
+    display: block;
+    margin: 1rem auto;
 }
+
 .event-boton-inscribirse {
-    position: absolute;
-    right: 2rem;
-    bottom: 2rem;
+    display: block;
+    margin: 2rem auto;
     border: medium solid #00FFD1;
     color: white;
-    padding: .5rem;
+    padding: .5rem 2rem;
     width: fit-content;
     height: fit-content;
     font-size: 1.6rem;
@@ -204,23 +225,23 @@ a {
     text-align: center;
     transition: 2s;
 }
+
 .event-boton-inscribirse:hover {
     background-color: #00FFD1;
     color: black;
     transition: 2s;
 }
+
 .event-categories {
-    position: absolute;
-    right: 3rem;
-    top: 10.8rem;
     color: white;
     font-size: 1.5rem;
+    text-align: center;
+    margin-top: 1rem;
 }
+
 .event-categories-list {
-    position: absolute;
-    top: 13rem;
-    right: 3.1rem;
     color: white;
+    text-align: center;
 }
 
 /* Responsive Styles */
@@ -241,8 +262,8 @@ a {
         padding: 2rem 1rem;
     }
     .events-container-2 {
-        height: auto;
         text-align: center;
+        padding: 1rem;
     }
     .events-comence-in,
     .cuenta-regresiva,
@@ -255,15 +276,16 @@ a {
     .event-boton-inscribirse {
         position: static;
         text-align: center;
+        margin: 0.5rem 0;
     }
     .cuenta-regresiva {
-        font-size: 3rem;
+        font-size: 2rem;
     }
     .extra-bold {
-        font-size: 2.5rem;
+        font-size: 2rem;
     }
     .event-date {
-        font-size: 1.5rem;
+        font-size: 1.2rem;
     }
     .event-categories {
         font-size: 1.2rem;
